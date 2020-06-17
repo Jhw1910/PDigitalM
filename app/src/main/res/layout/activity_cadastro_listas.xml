@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tela_5"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F7FF"
+    android:backgroundTint="#F0F7FF">
+
+    <EditText
+        android:id="@+id/nome_lista_cadastro_listas"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:gravity="center|center_horizontal"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.037" />
+
+    <TextView
+        android:id="@+id/textview_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="0"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="@+id/button_add"
+        app:layout_constraintEnd_toStartOf="@+id/button_increase"
+        app:layout_constraintTop_toTopOf="@+id/button_add" />
+
+    <Button
+        android:id="@+id/button_decrease"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textview_amount"
+        android:layout_alignBottom="@+id/textview_amount"
+        android:layout_marginEnd="8dp"
+        android:layout_toStartOf="@+id/textview_amount"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="@+id/textview_amount"
+        app:layout_constraintEnd_toStartOf="@+id/textview_amount"
+        app:layout_constraintTop_toTopOf="@+id/textview_amount" />
+
+    <Button
+        android:id="@+id/button_increase"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textview_amount"
+        android:layout_alignBottom="@+id/textview_amount"
+        android:layout_marginEnd="8dp"
+        android:layout_toEndOf="@+id/textview_amount"
+        android:text="+"
+        app:layout_constraintBottom_toBottomOf="@+id/textview_amount"
+        app:layout_constraintEnd_toStartOf="@+id/button_add"
+        app:layout_constraintTop_toTopOf="@+id/textview_amount" />
+
+    <Button
+        android:id="@+id/button_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/button_increase"
+        android:layout_alignBottom="@+id/button_increase"
+        android:layout_marginTop="16dp"
+        android:layout_toEndOf="@+id/button_increase"
+        android:text="add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/valor_produto" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/btt_confirmar_cadastro_listas"
+        app:layout_constraintTop_toBottomOf="@+id/textview_amount" />
+
+    <Button
+        android:id="@+id/btt_confirmar_cadastro_listas"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="confirmar cadastro"
+        app:layout_constraintBottom_toTopOf="@+id/btt_voltar_cadastro_listas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btt_voltar_cadastro_listas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="voltar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
+
+    <EditText
+        android:id="@+id/edittext_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:hint="Produto"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/valor_produto"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nome_lista_cadastro_listas" />
+
+    <EditText
+        android:id="@+id/valor_produto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:hint="Valor"
+        android:inputType = "numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/edittext_name"
+        app:layout_constraintTop_toBottomOf="@+id/nome_lista_cadastro_listas" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
